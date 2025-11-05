@@ -17,7 +17,12 @@ import {
   Palette,
   MessageSquare,
   ArrowRight,
-  X as XIcon
+  X as XIcon,
+  FileText,
+  Video,
+  FolderOpen,
+  AlertTriangle,
+  ClipboardCheck
 } from 'lucide-react';
 
 const LandingPage = () => {
