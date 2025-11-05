@@ -50,45 +50,87 @@ const LandingPage = () => {
   const features = [
     {
       icon: Target,
-      title: "Goal Setting & Alignment",
-      description: "Everyone knows what matters this quarter",
-      color: "text-blue-600"
+      title: "Organization Goals",
+      description: "Set and track strategic objectives across your organization",
+      color: "text-red-600"
     },
     {
       icon: Lightbulb,
-      title: "Idea Suggestion & Evaluation",
-      description: "Contributions from everyone (anonymity optional)",
-      color: "text-yellow-600"
+      title: "Idea Suggestions",
+      description: "Crowdsource innovation with anonymous idea submissions",
+      color: "text-red-500"
     },
     {
       icon: CheckSquare,
-      title: "Task & Follow-Up Tracking",
-      description: "Clear ownership, deadlines, and reminders",
-      color: "text-green-600"
+      title: "Tasks & Eisenhower Matrix",
+      description: "Prioritize with urgency/importance quadrants",
+      color: "text-red-600"
+    },
+    {
+      icon: FileText,
+      title: "Meeting Notes",
+      description: "Auto-extract action items from meeting notes",
+      color: "text-red-500"
+    },
+    {
+      icon: Video,
+      title: "Content Ideas",
+      description: "Build and track your content idea bank",
+      color: "text-red-600"
     },
     {
       icon: Palette,
-      title: "Creative Workflow + Approvals",
-      description: "Replace feedback loops in 7 different places",
-      color: "text-purple-600"
+      title: "Creative Requests",
+      description: "Streamline design and creative workflows",
+      color: "text-red-500"
+    },
+    {
+      icon: FolderOpen,
+      title: "Asset Library",
+      description: "Centralized repository for all digital assets",
+      color: "text-red-600"
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance Campaigns",
+      description: "Track marketing campaigns and learnings",
+      color: "text-red-500"
+    },
+    {
+      icon: Users,
+      title: "Skill Directory",
+      description: "Find the right expert for any project",
+      color: "text-red-600"
     },
     {
       icon: BookOpen,
-      title: "Content & Campaign Knowledge Hub",
-      description: "Learn from what works (and avoid what doesn't)",
-      color: "text-orange-600"
-    },
-    {
-      icon: BarChart3,
-      title: "KPI & Scorecard Tracking",
-      description: "Turn execution into measurable business results",
-      color: "text-indigo-600"
+      title: "Knowledge Hub",
+      description: "SOPs and processes in one searchable place",
+      color: "text-red-500"
     },
     {
       icon: Award,
-      title: "Recognition Wall",
-      description: "Positive culture encouraged, publicly",
-      color: "text-pink-600"
+      title: "Shoutouts & Recognition",
+      description: "Celebrate wins and recognize team members",
+      color: "text-red-600"
+    },
+    {
+      icon: BarChart3,
+      title: "KPIs",
+      description: "Monitor key performance indicators in real-time",
+      color: "text-red-500"
+    },
+    {
+      icon: AlertTriangle,
+      title: "KRIs",
+      description: "Identify and mitigate risks proactively",
+      color: "text-red-600"
+    },
+    {
+      icon: ClipboardCheck,
+      title: "Team Scorecards",
+      description: "Comprehensive team performance reviews",
+      color: "text-red-500"
     }
   ];
 
