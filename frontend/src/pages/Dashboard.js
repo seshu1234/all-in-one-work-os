@@ -25,12 +25,12 @@ import {
 import { ScrollArea } from '../components/ui/scroll-area';
 
 // Module Pages
+import MyDashboard from '../modules/MyDashboard';
 import StrategyDashboard from '../modules/StrategyDashboard';
 import GoalsModule from '../modules/GoalsModule';
 import IdeasModule from '../modules/IdeasModule';
 import TasksModule from '../modules/TasksModule';
 import MeetingNotesModule from '../modules/MeetingNotesModule';
-import ClientConversationsModule from '../modules/ClientConversationsModule';
 import ContentIdeasModule from '../modules/ContentIdeasModule';
 import CreativeRequestsModule from '../modules/CreativeRequestsModule';
 import AssetsModule from '../modules/AssetsModule';
