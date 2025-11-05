@@ -603,6 +603,59 @@ async def delete_task(id: str, current_user: dict = Depends(get_current_user)):
         raise HTTPException(404, "Not found")
     return {"message": "Deleted"}
 
+# Task Reminders & Notifications
+@api_router.get("/tasks/reminders/check")
+async def check_task_reminders(current_user: dict = Depends(get_current_user)):
+    """Check for tasks that need reminders (due within 24 hours or overdue)"""
+    items = await db.tasks.find({}, {"_id": 0}).to_list(1000)
+    tasks = [parse_datetimes(item) for item in items]
+    
+    now = datetime.now(timezone.utc)
+    tomorrow = now + timedelta(hours=24)
+    
+    reminders = {
+        "due_soon": [],
+        "overdue": [],
+        "today": []
+    }
+    
+    for task in tasks:
+        if task['status'] == 'Done':
+            continue
+            
+        deadline = datetime.fromisoformat(task['deadline'].replace('Z', '+00:00'))
+        if deadline.tzinfo is None:
+            deadline = deadline.replace(tzinfo=timezone.utc)
+        
+        # Overdue tasks
+        if deadline < now:
+            reminders["overdue"].append({
+                "id": task['id'],
+                "title": task['task_title'],
+                "assigned_to": task['assigned_to'],
+                "deadline": task['deadline'],
+                "days_overdue": (now - deadline).days
+            })
+        # Due today
+        elif deadline.date() == now.date():
+            reminders["today"].append({
+                "id": task['id'],
+                "title": task['task_title'],
+                "assigned_to": task['assigned_to'],
+                "deadline": task['deadline']
+            })
+        # Due within 24 hours
+        elif deadline <= tomorrow:
+            reminders["due_soon"].append({
+                "id": task['id'],
+                "title": task['task_title'],
+                "assigned_to": task['assigned_to'],
+                "deadline": task['deadline'],
+                "hours_remaining": int((deadline - now).total_seconds() / 3600)
+            })
+    
+    return reminders
+
 # Meeting Notes
 @api_router.post("/meeting-notes", response_model=MeetingNote)
 async def create_meeting_note(note: MeetingNoteCreate, current_user: dict = Depends(get_current_user)):
