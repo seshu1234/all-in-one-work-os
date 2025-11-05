@@ -216,14 +216,14 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
+              <div className="w-8 h-8 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center">
+                <Target className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold">InsideIIM Work OS</span>
+              <span className="text-xl font-bold">WorkOS</span>
             </div>
             <div className="flex items-center gap-4">
-              <Button variant="ghost" onClick={() => navigate('/auth')}>Login</Button>
-              <Button onClick={() => navigate('/auth')}>Get Started Free</Button>
+              <Button variant="ghost" onClick={() => navigate('/login')}>Login</Button>
+              <Button className="bg-red-600 hover:bg-red-700" onClick={() => navigate('/login')}>Get Started Free</Button>
             </div>
           </div>
         </div>
