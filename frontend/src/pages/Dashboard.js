@@ -27,6 +27,7 @@ import { ScrollArea } from '../components/ui/scroll-area';
 // Module Pages
 import MyDashboard from '../modules/MyDashboard';
 import StrategyDashboard from '../modules/StrategyDashboard';
+import AnalyticsDashboard from '../modules/AnalyticsDashboard';
 import GoalsModule from '../modules/GoalsModule';
 import GoalsDashboard from '../modules/GoalsDashboard';
 import IdeasModule from '../modules/IdeasModule';
