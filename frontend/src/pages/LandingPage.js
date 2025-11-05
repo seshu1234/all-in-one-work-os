@@ -532,16 +532,16 @@ const LandingPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-red-600 to-red-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Transform How Your Team Works?</h2>
-          <p className="text-xl mb-8 text-blue-100">Join hundreds of teams who've ditched the chaos.</p>
+          <p className="text-xl mb-8 text-red-100">Join hundreds of teams who've ditched the chaos.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" onClick={() => navigate('/auth')} className="text-lg px-8 py-6">
+            <Button size="lg" variant="secondary" onClick={() => navigate('/login')} className="text-lg px-8 py-6 bg-white text-red-600 hover:bg-gray-100">
               Start Free Today <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
-          <p className="text-blue-100 mt-6">Setup in 2 minutes • No credit card • Cancel anytime</p>
+          <p className="text-red-100 mt-6">Setup in 2 minutes • No credit card • Cancel anytime</p>
         </div>
       </section>
 
