@@ -484,7 +484,7 @@ const LandingPage = () => {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
@@ -493,10 +493,10 @@ const LandingPage = () => {
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, i) => (
-              <Card key={i} className={`relative ${plan.popular ? 'border-2 border-blue-600 shadow-xl' : ''}`}>
+              <Card key={i} className={`relative ${plan.popular ? 'border-2 border-red-600 shadow-xl' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-blue-600 text-white">Most Popular</Badge>
+                    <Badge className="bg-red-600 text-white">Most Popular</Badge>
                   </div>
                 )}
                 <CardHeader>
@@ -511,15 +511,15 @@ const LandingPage = () => {
                   <ul className="space-y-3 mb-6">
                     {plan.features.map((feature, j) => (
                       <li key={j} className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                         <span className="text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <Button 
-                    className="w-full" 
+                    className={`w-full ${plan.popular ? 'bg-red-600 hover:bg-red-700' : ''}`}
                     variant={plan.popular ? 'default' : 'outline'}
-                    onClick={() => navigate('/auth')}
+                    onClick={() => navigate('/login')}
                   >
                     {plan.cta}
                   </Button>
