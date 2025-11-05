@@ -77,6 +77,7 @@ const Dashboard = () => {
   const renderModule = () => {
     switch (activeModule) {
       case 'my-dashboard': return <MyDashboard />;
+      case 'analytics': return <AnalyticsDashboard />;
       case 'strategy': return <StrategyDashboard />;
       case 'goals-dashboard': return <GoalsDashboard />;
       case 'goals': return <GoalsModule />;
