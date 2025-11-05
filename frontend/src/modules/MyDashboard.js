@@ -6,6 +6,7 @@ import { Badge } from '../components/ui/badge';
 import { Progress } from '../components/ui/progress';
 import { Loader2, CheckSquare, Lightbulb, Target, Award, AlertCircle, Calendar, TrendingUp } from 'lucide-react';
 import { toast } from 'sonner';
+import RemindersPanel from '../components/RemindersPanel';
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
