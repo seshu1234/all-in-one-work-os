@@ -94,6 +94,7 @@ const TasksModule = () => {
       linked_idea_id: task.linked_idea_id || '',
       assigned_to_id: task.assigned_to_id,
       priority: task.priority,
+      eisenhower_quadrant: task.eisenhower_quadrant || 'Important & Urgent',
       status: task.status,
       deadline: task.deadline,
       comments: task.comments || '',
