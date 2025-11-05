@@ -330,18 +330,18 @@ const LandingPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Key Capabilities</h2>
-            <p className="text-xl text-gray-600">Everything you need to move fast and stay aligned</p>
+            <h2 className="text-4xl font-bold mb-4">14 Powerful Modules</h2>
+            <p className="text-xl text-gray-600">Everything your team needs in one place</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, i) => (
-              <Card key={i} className="hover:shadow-xl transition-shadow">
+              <Card key={i} className="hover:shadow-xl hover:border-red-300 transition-all duration-300 group">
                 <CardHeader>
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br from-${feature.color.split('-')[1]}-100 to-${feature.color.split('-')[1]}-200 flex items-center justify-center mb-4`}>
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <feature.icon className={`w-6 h-6 ${feature.color}`} />
                   </div>
                   <CardTitle className="text-lg">{feature.title}</CardTitle>
