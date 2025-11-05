@@ -107,7 +107,7 @@ const Auth = () => {
             <Button
               type="submit"
               data-testid="submit-auth-button"
-              className="w-full"
+              className="w-full bg-red-600 hover:bg-red-700"
               disabled={loading}
             >
               {loading ? 'Processing...' : isLogin ? 'Login' : 'Sign Up'}
