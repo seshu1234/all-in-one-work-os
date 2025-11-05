@@ -211,6 +211,18 @@ const TasksModule = () => {
                   </SelectContent>
                 </Select>
               </div>
+              <div>
+                <Label htmlFor="eisenhower_quadrant">Eisenhower Matrix *</Label>
+                <Select value={formData.eisenhower_quadrant} onValueChange={(value) => setFormData({...formData, eisenhower_quadrant: value})}>
+                  <SelectTrigger data-testid="task-matrix-select"><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Important & Urgent">🔴 Important & Urgent (Do First)</SelectItem>
+                    <SelectItem value="Important & Not Urgent">🟡 Important & Not Urgent (Schedule)</SelectItem>
+                    <SelectItem value="Not Important & Urgent">🔵 Not Important & Urgent (Delegate)</SelectItem>
+                    <SelectItem value="Not Important & Not Urgent">⚪ Not Important & Not Urgent (Eliminate)</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="priority">Priority *</Label>
