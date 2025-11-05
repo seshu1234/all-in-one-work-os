@@ -212,7 +212,6 @@ const KRIsModule = () => {
                 <Select value={formData.associated_goal_id} onValueChange={(value) => setFormData({ ...formData, associated_goal_id: value })}>
                   <SelectTrigger data-testid="kri-goal-select"><SelectValue placeholder="Select goal (optional)" /></SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">None</SelectItem>
                     {goals.map((goal) => (<SelectItem key={goal.id} value={goal.id}>{goal.goal_title}</SelectItem>))}
                   </SelectContent>
                 </Select>
