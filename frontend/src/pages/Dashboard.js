@@ -43,6 +43,7 @@ import SkillDirectoryModule from '../modules/SkillDirectoryModule';
 import KnowledgeHubModule from '../modules/KnowledgeHubModule';
 import ShoutoutsModule from '../modules/ShoutoutsModule';
 import KPIsModule from '../modules/KPIsModule';
+import KPIsDashboard from '../modules/KPIsDashboard';
 import KRIsModule from '../modules/KRIsModule';
 import ScorecardsModule from '../modules/ScorecardsModule';
 
