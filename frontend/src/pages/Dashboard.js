@@ -68,12 +68,12 @@ const Dashboard = () => {
 
   const renderModule = () => {
     switch (activeModule) {
+      case 'my-dashboard': return <MyDashboard />;
       case 'strategy': return <StrategyDashboard />;
       case 'goals': return <GoalsModule />;
       case 'ideas': return <IdeasModule />;
       case 'tasks': return <TasksModule />;
       case 'meeting-notes': return <MeetingNotesModule />;
-      case 'client-conversations': return <ClientConversationsModule />;
       case 'content-ideas': return <ContentIdeasModule />;
       case 'creative-requests': return <CreativeRequestsModule />;
       case 'assets': return <AssetsModule />;
