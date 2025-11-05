@@ -7,7 +7,8 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Avatar, AvatarFallback } from '../components/ui/avatar';
-import { Plus, Loader2, Heart, Trash2 } from 'lucide-react';
+import { Badge } from '../components/ui/badge';
+import { Plus, Loader2, Heart, Trash2, Award, TrendingUp, Users, Sparkles } from 'lucide-react';
 import { toast } from 'sonner';
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
