@@ -321,7 +321,7 @@ const LandingPage = () => {
                 </CardContent>
               </Card>
               <div className="mt-6 text-center">
-                <p className="text-lg font-semibold mb-4">InsideIIM Work OS brings everything together.</p>
+                <p className="text-lg font-semibold mb-4">WorkOS brings everything together.</p>
                 <p className="text-gray-600">In one place. For everyone. Always accessible.</p>
               </div>
             </div>
