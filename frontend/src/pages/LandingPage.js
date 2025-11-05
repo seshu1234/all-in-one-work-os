@@ -611,7 +611,7 @@ const LandingPage = () => {
                   <li>✓ What campaigns worked.</li>
                   <li>✓ Who deserves appreciation.</li>
                 </ul>
-                <p className="text-xl font-bold mt-6">This is InsideIIM Work OS.</p>
+                <p className="text-xl font-bold mt-6">This is WorkOS.</p>
                 <p className="text-lg">Work happens here now.</p>
               </div>
             </div>
