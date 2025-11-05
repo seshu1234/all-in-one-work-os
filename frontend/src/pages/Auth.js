@@ -122,7 +122,7 @@ const Auth = () => {
                 setIsLogin(!isLogin);
                 setError('');
               }}
-              className="text-sm text-blue-600 hover:underline"
+              className="text-sm text-red-600 hover:underline"
             >
               {isLogin ? "Don't have an account? Sign up" : 'Already have an account? Login'}
             </button>
