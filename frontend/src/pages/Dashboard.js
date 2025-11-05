@@ -70,6 +70,7 @@ const Dashboard = () => {
     { id: 'skill-directory', name: 'Skill Directory', icon: Award },
     { id: 'knowledge-hub', name: 'Knowledge Hub', icon: BookOpen },
     { id: 'shoutouts', name: 'Shoutouts', icon: MessageSquare },
+    { id: 'kpis-dashboard', name: '📊 KPIs Dashboard', icon: BarChart3 },
     { id: 'kpis', name: 'KPIs', icon: BarChart3 },
     { id: 'kris', name: 'KRIs', icon: AlertTriangle },
     { id: 'scorecards', name: 'Team Scorecards', icon: ClipboardList },
