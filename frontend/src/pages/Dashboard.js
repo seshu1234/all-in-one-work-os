@@ -53,6 +53,7 @@ const Dashboard = () => {
 
   const modules = [
     { id: 'my-dashboard', name: 'My Dashboard', icon: LayoutDashboard },
+    { id: 'analytics', name: '📈 Analytics & Reports', icon: BarChart3 },
     { id: 'strategy', name: 'OKR & Strategy', icon: TrendingUp },
     { id: 'goals-dashboard', name: '📊 Goals Dashboard', icon: Target },
     { id: 'goals', name: 'Organization Goals', icon: Target },
