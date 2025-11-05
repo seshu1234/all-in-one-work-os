@@ -48,17 +48,16 @@ const Dashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   const modules = [
-    { id: 'dashboard', name: 'Dashboard', icon: LayoutDashboard },
+    { id: 'my-dashboard', name: 'My Dashboard', icon: LayoutDashboard },
     { id: 'strategy', name: 'OKR & Strategy', icon: TrendingUp },
     { id: 'goals', name: 'Organization Goals', icon: Target },
     { id: 'ideas', name: 'Idea Suggestions', icon: Lightbulb },
     { id: 'tasks', name: 'Tasks', icon: CheckSquare },
     { id: 'meeting-notes', name: 'Meeting Notes', icon: FileText },
-    { id: 'client-conversations', name: 'Client Conversations', icon: Users },
     { id: 'content-ideas', name: 'Content Idea Bank', icon: ImageIcon },
     { id: 'creative-requests', name: 'Creative Requests', icon: Palette },
     { id: 'assets', name: 'Asset Library', icon: FolderOpen },
-    { id: 'campaigns', name: 'Performance Campaigns', icon: TrendingUp },
+    { id: 'campaigns', name: 'Performance Campaigns', icon: BarChart3 },
     { id: 'skill-directory', name: 'Skill Directory', icon: Award },
     { id: 'knowledge-hub', name: 'Knowledge Hub', icon: BookOpen },
     { id: 'shoutouts', name: 'Shoutouts', icon: MessageSquare },
