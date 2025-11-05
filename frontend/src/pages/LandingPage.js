@@ -254,7 +254,7 @@ const LandingPage = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1483058712412-4245e9b90334"
+                src="/hero.png"
                 alt="Modern workspace"
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
