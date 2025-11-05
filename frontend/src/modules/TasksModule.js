@@ -195,7 +195,6 @@ const TasksModule = () => {
                 <Select value={formData.linked_idea_id} onValueChange={(value) => setFormData({...formData, linked_idea_id: value})}>
                   <SelectTrigger><SelectValue placeholder="Select idea (optional)" /></SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">None</SelectItem>
                     {ideas.map((idea) => (<SelectItem key={idea.id} value={idea.id}>{idea.idea_title}</SelectItem>))}
                   </SelectContent>
                 </Select>
