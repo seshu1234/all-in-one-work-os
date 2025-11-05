@@ -353,20 +353,104 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* Benefits with Images */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Why Teams Love WorkOS</h2>
+            <p className="text-xl text-gray-600">Stop juggling multiple tools. Start moving faster together.</p>
+          </div>
+          
+          <div className="space-y-20">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">Align Your Team</h3>
+                <p className="text-lg text-gray-600 mb-6">
+                  Connect goals, ideas, and tasks in one unified workspace. Everyone knows what matters and why.
+                </p>
+                <ul className="space-y-3">
+                  {['Clear goal visibility', 'Anonymous idea submissions', 'Linked objectives'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c"
+                  alt="Team alignment"
+                  className="rounded-2xl shadow-xl w-full h-auto"
+                />
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-2 md:order-1">
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+                  alt="Team collaboration"
+                  className="rounded-2xl shadow-xl w-full h-auto"
+                />
+              </div>
+              <div className="order-1 md:order-2">
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">Move Faster</h3>
+                <p className="text-lg text-gray-600 mb-6">
+                  Automated workflows and smart reminders keep projects moving. No more manual status updates.
+                </p>
+                <ul className="space-y-3">
+                  {['Auto task creation', 'Smart reminders', 'Real-time updates'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">Make Better Decisions</h3>
+                <p className="text-lg text-gray-600 mb-6">
+                  Real-time KPIs, risk indicators, and performance scorecards give you the insights you need.
+                </p>
+                <ul className="space-y-3">
+                  {['Live KPI tracking', 'Risk monitoring', 'Team scorecards'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1555212697-194d092e3b8f"
+                  alt="Better decisions"
+                  className="rounded-2xl shadow-xl w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Use Cases */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Who Uses It</h2>
-            <p className="text-xl text-gray-600">If your team collaborates — you need InsideIIM Work OS.</p>
+            <p className="text-xl text-gray-600">If your team collaborates — you need WorkOS.</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, i) => (
-              <Card key={i} className="text-center hover:shadow-lg transition-shadow">
+              <Card key={i} className="text-center hover:shadow-lg hover:border-red-300 transition-all">
                 <CardContent className="pt-6">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">
-                    <useCase.icon className="w-8 h-8 text-blue-600" />
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-red-100 flex items-center justify-center">
+                    <useCase.icon className="w-8 h-8 text-red-600" />
                   </div>
                   <p className="font-semibold text-gray-800">{useCase.role}</p>
                 </CardContent>
