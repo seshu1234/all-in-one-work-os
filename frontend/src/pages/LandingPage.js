@@ -1,0 +1,486 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
+import { 
+  CheckCircle, 
+  Target, 
+  Lightbulb, 
+  CheckSquare, 
+  BarChart3, 
+  Award,
+  Zap,
+  Users,
+  TrendingUp,
+  BookOpen,
+  Palette,
+  MessageSquare,
+  ArrowRight,
+  X as XIcon
+} from 'lucide-react';
+
+const LandingPage = () => {
+  const navigate = useNavigate();
+  const [showVideo, setShowVideo] = useState(false);
+
+  const problems = [
+    "Slack messages",
+    "WhatsApp chats",
+    "Spreadsheets",
+    "Google Docs",
+    "Untracked approvals",
+    "Lost follow-ups",
+    "Repeated mistakes"
+  ];
+
+  const painPoints = [
+    "What is being worked on",
+    "Who owns what",
+    "What is blocked",
+    "What was learned",
+    "What worked in the past"
+  ];
+
+  const features = [
+    {
+      icon: Target,
+      title: "Goal Setting & Alignment",
+      description: "Everyone knows what matters this quarter",
+      color: "text-blue-600"
+    },
+    {
+      icon: Lightbulb,
+      title: "Idea Suggestion & Evaluation",
+      description: "Contributions from everyone (anonymity optional)",
+      color: "text-yellow-600"
+    },
+    {
+      icon: CheckSquare,
+      title: "Task & Follow-Up Tracking",
+      description: "Clear ownership, deadlines, and reminders",
+      color: "text-green-600"
+    },
+    {
+      icon: Palette,
+      title: "Creative Workflow + Approvals",
+      description: "Replace feedback loops in 7 different places",
+      color: "text-purple-600"
+    },
+    {
+      icon: BookOpen,
+      title: "Content & Campaign Knowledge Hub",
+      description: "Learn from what works (and avoid what doesn't)",
+      color: "text-orange-600"
+    },
+    {
+      icon: BarChart3,
+      title: "KPI & Scorecard Tracking",
+      description: "Turn execution into measurable business results",
+      color: "text-indigo-600"
+    },
+    {
+      icon: Award,
+      title: "Recognition Wall",
+      description: "Positive culture encouraged, publicly",
+      color: "text-pink-600"
+    }
+  ];
+
+  const testimonials = [
+    {
+      quote: "We reduced meeting follow-ups by 70%. No one asks 'Who is doing this?' anymore.",
+      author: "Growth Head",
+      company: "EdTech Brand"
+    },
+    {
+      quote: "Campaign learnings used to get lost. Now we reuse and scale what works.",
+      author: "Marketing Lead",
+      company: "SaaS Company"
+    },
+    {
+      quote: "Finally, one place where everyone can see goals, tasks, and progress. Game changer.",
+      author: "Founder & CEO",
+      company: "Tech Startup"
+    }
+  ];
+
+  const pricing = [
+    {
+      name: "Free",
+      price: "$0",
+      period: "forever",
+      description: "Small teams getting started",
+      features: [
+        "Up to 5 team members",
+        "Basic goal & task tracking",
+        "Idea suggestions",
+        "Knowledge hub",
+        "Community support"
+      ],
+      cta: "Start Free",
+      popular: false
+    },
+    {
+      name: "Pro",
+      price: "$12",
+      period: "per user/month",
+      description: "Growing teams",
+      features: [
+        "Unlimited team members",
+        "Advanced workflows",
+        "KPI & scorecard tracking",
+        "Creative approvals",
+        "Priority support",
+        "Custom integrations"
+      ],
+      cta: "Start Free Trial",
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      period: "pricing",
+      description: "Large orgs needing SSO & custom workflow",
+      features: [
+        "Everything in Pro",
+        "SSO & advanced security",
+        "Custom workflows",
+        "Dedicated account manager",
+        "SLA guarantees",
+        "White-label options"
+      ],
+      cta: "Contact Sales",
+      popular: false
+    }
+  ];
+
+  const useCases = [
+    { role: "Founders & Leadership", icon: TrendingUp },
+    { role: "Marketing & Creative Teams", icon: Palette },
+    { role: "Sales & Partnerships", icon: Users },
+    { role: "Operations & Delivery Teams", icon: CheckSquare }
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
+                <Zap className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-xl font-bold">InsideIIM Work OS</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <Button variant="ghost" onClick={() => navigate('/auth')}>Login</Button>
+              <Button onClick={() => navigate('/auth')}>Get Started Free</Button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="text-center max-w-4xl mx-auto">
+            <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-100">
+              The Operating System for Teams Who Move Fast
+            </Badge>
+            <h1 className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Work Together.<br />Move Faster.<br />Stay Aligned.
+            </h1>
+            <p className="text-xl lg:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              The all-in-one workspace for teams to set goals, collaborate, deliver, and learn — without chaos.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button size="lg" onClick={() => navigate('/auth')} className="text-lg px-8 py-6">
+                Start Free <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+              <Button size="lg" variant="outline" onClick={() => setShowVideo(true)} className="text-lg px-8 py-6">
+                Watch 30s Demo
+              </Button>
+            </div>
+            <p className="text-sm text-gray-500 mt-4">No credit card required • 2 minutes to set up</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Why This Exists</h2>
+            <p className="text-xl text-gray-600">Work is happening — but information is scattered.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-red-600">Teams operate across:</h3>
+              <div className="space-y-3">
+                {problems.map((problem, i) => (
+                  <div key={i} className="flex items-center gap-3 p-3 bg-red-50 rounded-lg border border-red-200">
+                    <XIcon className="w-5 h-5 text-red-600 flex-shrink-0" />
+                    <span className="text-gray-700">{problem}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 p-4 bg-gray-100 rounded-lg">
+                <p className="font-semibold mb-2">This causes chaos. No one knows:</p>
+                <ul className="space-y-1">
+                  {painPoints.map((point, i) => (
+                    <li key={i} className="text-gray-700 text-sm">• {point}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-green-600">The Solution:</h3>
+              <Card className="border-2 border-green-200 bg-green-50">
+                <CardHeader>
+                  <CardTitle>A single shared workspace where:</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    {[
+                      "Goals are defined",
+                      "Ideas are collected (even anonymously)",
+                      "Tasks are tracked",
+                      "Creative assets are reviewed",
+                      "Campaigns are measured",
+                      "Knowledge is preserved",
+                      "Recognition is visible"
+                    ].map((solution, i) => (
+                      <div key={i} className="flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                        <span className="text-gray-700">{solution}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+              <div className="mt-6 text-center">
+                <p className="text-lg font-semibold mb-4">InsideIIM Work OS brings everything together.</p>
+                <p className="text-gray-600">In one place. For everyone. Always accessible.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Key Capabilities</h2>
+            <p className="text-xl text-gray-600">Everything you need to move fast and stay aligned</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, i) => (
+              <Card key={i} className="hover:shadow-xl transition-shadow">
+                <CardHeader>
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br from-${feature.color.split('-')[1]}-100 to-${feature.color.split('-')[1]}-200 flex items-center justify-center mb-4`}>
+                    <feature.icon className={`w-6 h-6 ${feature.color}`} />
+                  </div>
+                  <CardTitle className="text-lg">{feature.title}</CardTitle>
+                  <CardDescription>{feature.description}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Who Uses It</h2>
+            <p className="text-xl text-gray-600">If your team collaborates — you need InsideIIM Work OS.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, i) => (
+              <Card key={i} className="text-center hover:shadow-lg transition-shadow">
+                <CardContent className="pt-6">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center">
+                    <useCase.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <p className="font-semibold text-gray-800">{useCase.role}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Loved by Teams Worldwide</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, i) => (
+              <Card key={i} className="bg-white/10 backdrop-blur-sm border-white/20">
+                <CardContent className="pt-6">
+                  <p className="text-white/90 mb-4 italic">"{testimonial.quote}"</p>
+                  <div className="border-t border-white/20 pt-4">
+                    <p className="font-semibold text-white">{testimonial.author}</p>
+                    <p className="text-white/70 text-sm">{testimonial.company}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
+            <p className="text-xl text-gray-600">Choose the plan that fits your team</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map((plan, i) => (
+              <Card key={i} className={`relative ${plan.popular ? 'border-2 border-blue-600 shadow-xl' : ''}`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <Badge className="bg-blue-600 text-white">Most Popular</Badge>
+                  </div>
+                )}
+                <CardHeader>
+                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                  <div className="mt-4">
+                    <span className="text-4xl font-bold">{plan.price}</span>
+                    <span className="text-gray-600 ml-2">{plan.period}</span>
+                  </div>
+                  <CardDescription>{plan.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 mb-6">
+                    {plan.features.map((feature, j) => (
+                      <li key={j} className="flex items-start gap-2">
+                        <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                        <span className="text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button 
+                    className="w-full" 
+                    variant={plan.popular ? 'default' : 'outline'}
+                    onClick={() => navigate('/auth')}
+                  >
+                    {plan.cta}
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <p className="text-center text-gray-600 mt-8">No credit card required to start.</p>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-4">Ready to Transform How Your Team Works?</h2>
+          <p className="text-xl mb-8 text-blue-100">Join hundreds of teams who've ditched the chaos.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" onClick={() => navigate('/auth')} className="text-lg px-8 py-6">
+              Start Free Today <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </div>
+          <p className="text-blue-100 mt-6">Setup in 2 minutes • No credit card • Cancel anytime</p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-white" />
+                </div>
+                <span className="text-xl font-bold">InsideIIM Work OS</span>
+              </div>
+              <p className="text-gray-400 text-sm">The Operating System for Teams Who Move Fast.</p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Product</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#" className="hover:text-white">Features</a></li>
+                <li><a href="#" className="hover:text-white">Pricing</a></li>
+                <li><a href="#" className="hover:text-white">Security</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Company</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#" className="hover:text-white">About</a></li>
+                <li><a href="#" className="hover:text-white">Blog</a></li>
+                <li><a href="#" className="hover:text-white">Careers</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Support</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="#" className="hover:text-white">Help Center</a></li>
+                <li><a href="#" className="hover:text-white">Contact</a></li>
+                <li><a href="#" className="hover:text-white">Status</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+            <p>&copy; 2025 InsideIIM Work OS. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+
+      {/* Video Modal */}
+      {showVideo && (
+        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onClick={() => setShowVideo(false)}>
+          <div className="bg-white rounded-lg p-8 max-w-3xl w-full" onClick={(e) => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-4">
+              <h3 className="text-2xl font-bold">30-Second Demo</h3>
+              <button onClick={() => setShowVideo(false)} className="p-2 hover:bg-gray-100 rounded">
+                <XIcon className="w-6 h-6" />
+              </button>
+            </div>
+            <div className="aspect-video bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center text-white text-center p-8">
+              <div>
+                <p className="text-lg mb-4">Imagine your team opens one dashboard and sees:</p>
+                <ul className="text-left max-w-md mx-auto space-y-2">
+                  <li>✓ What the company is trying to achieve.</li>
+                  <li>✓ The best ideas on how to achieve it.</li>
+                  <li>✓ Who is doing what.</li>
+                  <li>✓ What's blocked.</li>
+                  <li>✓ Which creative assets already exist.</li>
+                  <li>✓ What campaigns worked.</li>
+                  <li>✓ Who deserves appreciation.</li>
+                </ul>
+                <p className="text-xl font-bold mt-6">This is InsideIIM Work OS.</p>
+                <p className="text-lg">Work happens here now.</p>
+              </div>
+            </div>
+            <Button className="w-full mt-4" size="lg" onClick={() => { setShowVideo(false); navigate('/auth'); }}>
+              Get Started Free
+            </Button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default LandingPage;
