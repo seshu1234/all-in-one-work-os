@@ -95,15 +95,77 @@ const ShoutoutsModule = () => {
     return name.split(' ').map(n => n[0]).join('').toUpperCase() || 'U';
   };
 
+  // Calculate leaderboard
+  const getLeaderboard = () => {
+    const counts = {};
+    shoutouts.forEach(s => {
+      counts[s.to_user_id] = (counts[s.to_user_id] || 0) + 1;
+    });
+    return Object.entries(counts)
+      .map(([userId, count]) => ({ userId, count, name: getUserName(userId) }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 5);
+  };
+
   if (loading) {
     return <div className="flex items-center justify-center h-full"><Loader2 className="w-8 h-8 animate-spin text-blue-600" /></div>;
   }
 
+  const leaderboard = getLeaderboard();
+
   return (
     <div className="p-6" data-testid="shoutouts-module">
+      {/* Stats Dashboard */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+        <Card>
+          <CardHeader className="pb-2">
+            <CardDescription>Total Shoutouts</CardDescription>
+            <CardTitle className="text-3xl">{shoutouts.length}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex items-center text-sm text-green-600">
+              <TrendingUp className="w-4 h-4 mr-1" />Building culture
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="pb-2">
+            <CardDescription>Active Contributors</CardDescription>
+            <CardTitle className="text-3xl">{new Set(shoutouts.map(s => s.from_user_id)).size}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex items-center text-sm text-blue-600">
+              <Users className="w-4 h-4 mr-1" />Team engagement
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="pb-2">
+            <CardDescription>This Month</CardDescription>
+            <CardTitle className="text-3xl">{shoutouts.filter(s => new Date(s.date).getMonth() === new Date().getMonth()).length}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex items-center text-sm text-purple-600">
+              <Sparkles className="w-4 h-4 mr-1" />Recent activity
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="pb-2">
+            <CardDescription>Top Performer</CardDescription>
+            <CardTitle className="text-xl">{leaderboard[0]?.name || 'N/A'}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex items-center text-sm text-yellow-600">
+              <Award className="w-4 h-4 mr-1" />{leaderboard[0]?.count || 0} shoutouts
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
       <div className="flex justify-between items-center mb-6">
         <div>
-          <h1 className="text-3xl font-bold">Shoutouts & Recognition</h1>
+          <h1 className="text-3xl font-bold">Recognition Wall</h1>
           <p className="text-gray-600">Celebrate achievements and appreciate team members</p>
         </div>
         <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
