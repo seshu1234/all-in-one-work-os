@@ -144,7 +144,6 @@ const ShoutoutsModule = () => {
                 <Select value={formData.related_work_id} onValueChange={(value) => setFormData({...formData, related_work_id: value})}>
                   <SelectTrigger><SelectValue placeholder="Select task (optional)" /></SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">None</SelectItem>
                     {tasks.map((task) => (<SelectItem key={task.id} value={task.id}>{task.task_title}</SelectItem>))}
                   </SelectContent>
                 </Select>
