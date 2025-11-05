@@ -237,7 +237,7 @@ const LandingPage = () => {
               <Badge className="mb-4 bg-red-100 text-red-700 hover:bg-red-100">
                 The Operating System for Teams Who Move Fast
               </Badge>
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 Your Team's
                 <span className="bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent"> All-In-One</span>
                 <br />Work OS
@@ -247,10 +247,7 @@ const LandingPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" onClick={() => navigate('/login')} className="text-lg px-8 py-6 bg-red-600 hover:bg-red-700">
-                  Start Free <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button size="lg" variant="outline" onClick={() => setShowVideo(true)} className="text-lg px-8 py-6 border-red-600 text-red-600 hover:bg-red-50">
-                  Watch 30s Demo
+                  Get Started Free <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </div>
               <p className="text-sm text-gray-500 mt-4">No credit card required • Free forever • 2 minutes to set up</p>
