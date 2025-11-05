@@ -230,27 +230,38 @@ const LandingPage = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <section className="relative overflow-hidden bg-gradient-to-br from-red-50 via-orange-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-100">
-              The Operating System for Teams Who Move Fast
-            </Badge>
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Work Together.<br />Move Faster.<br />Stay Aligned.
-            </h1>
-            <p className="text-xl lg:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              The all-in-one workspace for teams to set goals, collaborate, deliver, and learn — without chaos.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" onClick={() => navigate('/auth')} className="text-lg px-8 py-6">
-                Start Free <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button size="lg" variant="outline" onClick={() => setShowVideo(true)} className="text-lg px-8 py-6">
-                Watch 30s Demo
-              </Button>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge className="mb-4 bg-red-100 text-red-700 hover:bg-red-100">
+                The Operating System for Teams Who Move Fast
+              </Badge>
+              <h1 className="text-5xl lg:text-6xl font-bold mb-6">
+                Your Team's
+                <span className="bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent"> All-In-One</span>
+                <br />Work OS
+              </h1>
+              <p className="text-xl lg:text-2xl text-gray-600 mb-8">
+                From strategy to execution, manage goals, ideas, tasks, and performance in one powerful platform. Built for teams that move fast and think big.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" onClick={() => navigate('/login')} className="text-lg px-8 py-6 bg-red-600 hover:bg-red-700">
+                  Start Free <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+                <Button size="lg" variant="outline" onClick={() => setShowVideo(true)} className="text-lg px-8 py-6 border-red-600 text-red-600 hover:bg-red-50">
+                  Watch 30s Demo
+                </Button>
+              </div>
+              <p className="text-sm text-gray-500 mt-4">No credit card required • Free forever • 2 minutes to set up</p>
             </div>
-            <p className="text-sm text-gray-500 mt-4">No credit card required • 2 minutes to set up</p>
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1483058712412-4245e9b90334"
+                alt="Modern workspace"
+                className="rounded-2xl shadow-2xl w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </section>
