@@ -27,6 +27,7 @@ const TasksModule = () => {
     linked_idea_id: '',
     assigned_to_id: '',
     priority: 'Medium',
+    eisenhower_quadrant: 'Important & Urgent',
     status: 'To Do',
     deadline: '',
     comments: '',
