@@ -551,10 +551,10 @@ const LandingPage = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-white" />
+                <div className="w-8 h-8 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center">
+                  <Target className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl font-bold">InsideIIM Work OS</span>
+                <span className="text-xl font-bold">WorkOS</span>
               </div>
               <p className="text-gray-400 text-sm">The Operating System for Teams Who Move Fast.</p>
             </div>
@@ -584,7 +584,7 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2025 InsideIIM Work OS. All rights reserved.</p>
+            <p>&copy; 2025 WorkOS. All rights reserved.</p>
           </div>
         </div>
       </footer>
