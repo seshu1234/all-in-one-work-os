@@ -220,7 +220,6 @@ const KPIsModule = () => {
                     <SelectValue placeholder="Select goal (optional)" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">None</SelectItem>
                     {goals.map((goal) => (
                       <SelectItem key={goal.id} value={goal.id}>
                         {goal.goal_title}
