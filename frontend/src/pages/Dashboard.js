@@ -53,8 +53,11 @@ const Dashboard = () => {
   const modules = [
     { id: 'my-dashboard', name: 'My Dashboard', icon: LayoutDashboard },
     { id: 'strategy', name: 'OKR & Strategy', icon: TrendingUp },
+    { id: 'goals-dashboard', name: '📊 Goals Dashboard', icon: Target },
     { id: 'goals', name: 'Organization Goals', icon: Target },
+    { id: 'ideas-dashboard', name: '📊 Ideas Dashboard', icon: Lightbulb },
     { id: 'ideas', name: 'Idea Suggestions', icon: Lightbulb },
+    { id: 'tasks-dashboard', name: '📊 Tasks Dashboard', icon: CheckSquare },
     { id: 'tasks', name: 'Tasks', icon: CheckSquare },
     { id: 'meeting-notes', name: 'Meeting Notes', icon: FileText },
     { id: 'content-ideas', name: 'Content Idea Bank', icon: ImageIcon },
