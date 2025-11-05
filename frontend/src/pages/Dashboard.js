@@ -95,6 +95,7 @@ const Dashboard = () => {
       case 'skill-directory': return <SkillDirectoryModule />;
       case 'knowledge-hub': return <KnowledgeHubModule />;
       case 'shoutouts': return <ShoutoutsModule />;
+      case 'kpis-dashboard': return <KPIsDashboard />;
       case 'kpis': return <KPIsModule />;
       case 'kris': return <KRIsModule />;
       case 'scorecards': return <ScorecardsModule />;
