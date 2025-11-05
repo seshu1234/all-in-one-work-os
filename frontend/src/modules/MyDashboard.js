@@ -111,6 +111,11 @@ const MyDashboard = () => {
         </Card>
       </div>
 
+      {/* Reminders Panel */}
+      <div className="mb-6">
+        <RemindersPanel />
+      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Urgent Tasks */}
         {urgentTasks.length > 0 && (
